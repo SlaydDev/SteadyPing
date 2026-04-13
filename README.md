@@ -54,6 +54,6 @@ SteadyPing doesn't just average numbers (which can still be skewed by huge error
 
 Maintainer: CaptainEXE
 
-Organization: Slayd Development
+Organization: [Slayd Development](https://slayddev.vercel.app)
 
 Status: v1.0.0-Stable
