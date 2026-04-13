@@ -1,5 +1,10 @@
 # SteadyPing 📡
 
+![Arduino Registry](https://img.shields.io/badge/Arduino-Library-00979D?style=for-the-badge&logo=arduino&logoColor=white)
+![GitHub release (latest by date)](https://img.shields.io/github/v/release/SlaydDev/SteadyPing?style=for-the-badge&color=blue)
+![License](https://img.shields.io/github/license/SlaydDev/SteadyPing?style=for-the-badge&color=orange)
+![Maintained](https://img.shields.io/badge/Maintained%3F-yes-green.svg?style=for-the-badge)
+
 **SteadyPing** is a high-stability Arduino library developed by **Slayd Development** to solve the "jitter" problem common with HC-SR04 ultrasonic sensors. 
 
 While standard code often produces jumpy, unstable readings (e.g., 25.1, 26.4, 24.8), **SteadyPing** uses signal processing techniques to deliver a rock-solid, single-decimal output.
@@ -11,12 +16,19 @@ While standard code often produces jumpy, unstable readings (e.g., 25.1, 26.4, 2
 - **Universal Compatibility:** Designed to run efficiently on Arduino Uno, Mega, Nano, and ESP-series boards.
 
 ## 🚀 Installation
+
+### Via Arduino Library Manager (Recommended)
+1. Open the Arduino IDE.
+2. Go to **Sketch** -> **Include Library** -> **Manage Libraries...**
+3. Search for **SteadyPing** and click **Install**.
+
+### Manual Installation
 1. Download the latest release as a `.zip`.
 2. In the Arduino IDE, go to **Sketch** -> **Include Library** -> **Add .ZIP Library...**
 3. Select the downloaded file.
 
 ## 🛠️ Quick Start
-```C++
+```cpp
 #include <SteadyPing.h>
 
 // Initialize: SteadyPing objectName(TrigPin, EchoPin);
@@ -37,9 +49,11 @@ void loop() {
   delay(100);
 }
 ```
-🔧 Engineering Logic
+## 🔧 Engineering Logic
 SteadyPing doesn't just average numbers (which can still be skewed by huge errors). It implements a Bubble Sort algorithm on the sensor buffer to find the mathematical median. This ensures that even if the sensor triggers a "zero" or "infinity" reading by mistake, your project stays steady.
 
-Maintained by: CaptainEXE | Slayd Development
+Maintainer: CaptainEXE
 
-Build Status: v1.0.0 | Beta
+Organization: Slayd Development
+
+Status: v1.0.0-Stable
